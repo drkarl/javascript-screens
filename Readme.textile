@@ -5,11 +5,11 @@ Javascript Screens is a simple Screen system for Javascript.
 It uses:
 
 * John Resig's "Simple Javascript Inheritance":http://ejohn.org/blog/simple-javascript-inheritance/
-* "Sammy.js"http://sammyjs.org/ to manage routes
+* "Sammy.js":http://sammyjs.org/ to manage routes
 * "Knockout.js":http://knockoutjs.com/ to bind data using MVVM
 * "Knockout.unobstrusive.js":https://github.com/bsatrom/Knockout.Unobtrusive to clean HTML of logic
-*"Lab.js":http://labjs.com/ to load scripts in an ordered way
-*"HTML5 Boilerplate":http://html5boilerplate.com/ as a base.
+* "Lab.js":http://labjs.com/ to load scripts in an ordered way
+* "HTML5 Boilerplate":http://html5boilerplate.com/ as a base.
 
 h2. Usage
 
