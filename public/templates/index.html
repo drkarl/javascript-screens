@@ -1,0 +1,82 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="/assets/stylesheets/style.css">
+
+	<script src="/assets/javascripts/lib/modernizr/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+<header>
+
+</header>
+<div id = "main">
+</div>
+<footer>
+
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/javascripts/lib/jquery/jquery-1.7.2.min.js"><\/script>')</script>
+
+<!-- scripts concatenated and minified via ant build script-->
+<script>
+    (function(g,b,d){var c=b.head||b.getElementsByTagName("head"),D="readyState",E="onreadystatechange",F="DOMContentLoaded",G="addEventListener",H=setTimeout;
+        function f(){
+            $LAB
+            .script("/assets/javascripts/lib/haml/haml.js").wait()
+            .script("/assets/javascripts/lib/sammy/sammy.js").wait()
+            .script("/assets/javascripts/lib/sammy/sammy.haml.js")
+            .script("/assets/javascripts/lib/sammy/sammy.title.js")
+            .script("/assets/javascripts/lib/knockout/knockout-latest.js").wait()
+            .script("/assets/javascripts/lib/knockout/knockout.mapping-latest.js").wait()
+            .script("/assets/javascripts/lib/knockout/knockout.unobtrusive.js")
+            .script("/assets/javascripts/lib/Class/Class.js").wait()
+            .script("/assets/javascripts/src/base/Router.js").wait()
+            .script("/assets/javascripts/src/base/Screen.js").wait()
+            .script("/assets/javascripts/src/base/ScreenFactory.js").wait()
+            .script("/assets/javascripts/plugins.js")
+            .script("/assets/javascripts/script.js").wait()
+            .script("/assets/javascripts/src/screens/Index.js")
+            .script("/assets/javascripts/src/screens/Content.js")
+            .wait(
+                function() {
+                    $(function() {
+                        APP.setBindings({
+                            text: ['thisName', 'thatName']
+                        });
+                        APP.register("index", new Index());
+                        APP.register("content", new Content());
+                        APP.init("#main");
+                    });
+                }
+            );
+        }
+        H(function(){if("item"in c){if(!c[0]){H(arguments.callee,25);return}c=c[0]}var a=b.createElement("script"),e=false;a.onload=a[E]=function(){if((a[D]&&a[D]!=="complete"&&a[D]!=="loaded")||e){return false}a.onload=a[E]=null;e=true;f()};
+        a.src="/assets/javascripts/lib/lab/LAB.js";
+        c.insertBefore(a,c.firstChild)},0);if(b[D]==null&&b[G]){b[D]="loading";b[G](F,d=function(){b.removeEventListener(F,d,false);b[D]="complete"},false)}})(this,document);
+</script>
+
+
+<!-- end scripts-->
+
+<script>
+	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+	s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
