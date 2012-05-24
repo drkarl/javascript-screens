@@ -2,14 +2,27 @@ h1. Javascript Screens
 
 Javascript Screens is a simple Screen system for Javascript.
 
+¿What does _screen_ mean in this project? A dynamic self-contained page in a web-site.
+
+That project features a ScreenFactory where you can register new Screens. Each Screen is 
+	* A javascript class 
+	* Extended from the Screen class
+	* Autowired to a Sammy.js route
+	* Which self renders an associated .haml file
+	* Using a ScreenName_18n.json file for internationalized copys
+	* Bound to dynamic data using knockout.js
+	* With automatic routing for elements with the css class ".link"
+	* And cleaner markup, getting rid of knockout.js' data-bind attributes thanks to Knockout.unobstrusive.js plugin for Knockout.js
+
 It uses:
 
+* "HTML5 Boilerplate":http://html5boilerplate.com/ as a base.
 * John Resig's "Simple Javascript Inheritance":http://ejohn.org/blog/simple-javascript-inheritance/
 * "Sammy.js":http://sammyjs.org/ to manage routes
 * "Knockout.js":http://knockoutjs.com/ to bind data using MVVM
 * "Knockout.unobstrusive.js":https://github.com/bsatrom/Knockout.Unobtrusive to clean HTML of logic
 * "Lab.js":http://labjs.com/ to load scripts in an ordered way
-* "HTML5 Boilerplate":http://html5boilerplate.com/ as a base.
+
 
 h2. Usage
 
