@@ -18,12 +18,13 @@ var Screen = Class.extend({
         this.title = title;
     },
 
-    addRoute : function() {
-        APP.router.addRoute(this.route, this.className, this.templateRendered, this.title, this);
-    },
-
     setup : function() {
         this.enableClickEvents();
+    },
+
+    addRoute : function() {
+        APP.menuRouter.addRoute('Menu', this.route, '', this.templateRendered, this, false);
+        APP.router.addRoute(this.className, this.route, this.title, this.templateRendered, this, true);
     },
 
     enableClickEvents : function(){

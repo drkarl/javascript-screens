@@ -1,14 +1,14 @@
 var Content = Screen.extend({
 
     init: function(){
-        this._super("Content", '#/content', 'Content');
-    },
-
-    enableClickEvents : function(){
-        this._super();
+        this._super("Content", '/content', 'Content');
     },
 
     setup : function() {
+        this._super();
+    },
+
+    enableClickEvents : function(){
         this._super();
     },
 

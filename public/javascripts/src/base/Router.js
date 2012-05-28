@@ -3,28 +3,36 @@ var Router = Class.extend({
     localsPath : '/assets/locals/',
     element_selector : null,
     main : null,
-    appName : 'My App -',
+    appName : null,
+
+    init: function(appName){
+        this.appName = appName;
+    },
 
     setSelector : function(selector) {
         this.element_selector = selector;
     },
 
-    addRoute : function(route, className, callback, title, screen) {
+    addRoute : function(className, route, title, callback,  screen, useTitle) {
         var self = this;
         var language = navigator.language;
         var localeFilePath = this.localsPath+language+"/"+className+"_i18n.json";
 
         this.main = $.sammy(this.element_selector, function() {
             this.use(Sammy.Haml);
-            this.use(Sammy.Title);
 
-            this.setTitle(self.appName);
+            if (useTitle) {
+                this.use(Sammy.Title);
+                this.setTitle(self.appName);
+            }
 
             this.cache_partials = true;
 
             this.get(route, function() {
                     var sammyObject = this;
-                    this.title(title);
+                    if (useTitle) {
+                        this.title(title);
+                    }
                     //Recupera fichero i18n
                     this.load(localeFilePath)
                         .then(function(i18nData) {

@@ -1,14 +1,14 @@
 var Index = Screen.extend({
 
     init: function(){
-        this._super("Index", '#/', 'Index');
-    },
-
-    enableClickEvents : function(){
-        this._super();
+        this._super("Index", '/', 'Index');
     },
 
     setup : function() {
+        this._super();
+    },
+
+    enableClickEvents : function(){
         this._super();
     },
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
@@ -13,14 +13,16 @@
 
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" href="../stylesheets/style.css">
+	<link rel="stylesheet" href="/assets/stylesheets/style.css">
 
-	<script src="../javascripts/lib/modernizr/modernizr-2.5.3.min.js"></script>
+	<script src="/assets/javascripts/lib/modernizr/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
 <header>
 
 </header>
+<div id = "topmenu">
+</div>
 <div id = "main">
 </div>
 <footer>
@@ -28,42 +30,23 @@
 </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/javascripts/lib/jquery/jquery-1.7.2.min.js"><\/script>')</script>
 
 <!-- scripts concatenated and minified via ant build script-->
 <script>
     (function(g,b,d){var c=b.head||b.getElementsByTagName("head"),D="readyState",E="onreadystatechange",F="DOMContentLoaded",G="addEventListener",H=setTimeout;
         function f(){
+            var env = "DEV";
             $LAB
-            .script("../javascripts/lib/haml/haml.js").wait()
-            .script("../javascripts/lib/sammy/sammy.js").wait()
-            .script("../javascripts/lib/sammy/sammy.haml.js")
-            .script("../javascripts/lib/sammy/sammy.title.js")
-            .script("../javascripts/lib/knockout/knockout-latest.js").wait()
-            .script("../javascripts/lib/knockout/knockout.mapping-latest.js").wait()
-            .script("../javascripts/lib/knockout/knockout.unobtrusive.js")
-            .script("../javascripts/lib/Class/Class.js").wait()
-            .script("../javascripts/src/base/Router.js").wait()
-            .script("../javascripts/src/base/Screen.js").wait()
-            .script("../javascripts/src/base/ScreenFactory.js").wait()
-            .script("../javascripts/plugins.js")
-            .script("../javascripts/script.js").wait()
-            .script("../javascripts/src/screens/Index.js")
-            .script("../javascripts/src/screens/Content.js")
-            .wait(
-                function() {
+            .script("/assets/javascripts/init/LoadScript-"+env+".js").wait(function() {
                     $(function() {
-                        APP.setBindings({
-                            text: ['thisName', 'thatName']
-                        });
-                        APP.register("index", new Index());
-                        APP.register("content", new Content());
-                        APP.init("#main");
+                        load();
                     });
                 }
             );
         }
         H(function(){if("item"in c){if(!c[0]){H(arguments.callee,25);return}c=c[0]}var a=b.createElement("script"),e=false;a.onload=a[E]=function(){if((a[D]&&a[D]!=="complete"&&a[D]!=="loaded")||e){return false}a.onload=a[E]=null;e=true;f()};
-        a.src="../javascripts/lib/lab/LAB.js";
+        a.src="/assets/javascripts/lib/lab/LAB.js";
         c.insertBefore(a,c.firstChild)},0);if(b[D]==null&&b[G]){b[D]="loading";b[G](F,d=function(){b.removeEventListener(F,d,false);b[D]="complete"},false)}})(this,document);
 </script>
 
